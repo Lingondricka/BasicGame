@@ -1,12 +1,14 @@
 import pygame
 from pygame.locals import *
 
+from Battleship import Battleship
+
 pygame.init()
 
 display_width = 800
 display_height = 600
 
-
+'''
 class Battleship:
     x = 400
     y = 450
@@ -22,7 +24,7 @@ class Battleship:
     def load_ship(self):
         shipboi.ship = pygame.transform.scale(shipboi.ship, (50, 150))
         screen.blit(self.ship, (shipboi.x, shipboi.y))
-
+'''
 
 screen = pygame.display.set_mode((display_width, display_height))
 pygame.display.set_caption('Ship boi')
@@ -30,7 +32,7 @@ white = [255, 255, 255]
 red = [255, 0, 0]
 screen.fill(red)
 shipboi = Battleship()
-shipboi.load_ship()
+shipboi.load_ship(screen)
 
 #shipboi.ship = pygame.transform.scale(shipboi.ship,(50,150))
 #screen.blit(shipboi.ship, (shipboi.x, shipboi.y))
